@@ -8,7 +8,7 @@ function addNumbers(a, b) {
 
 // BUG 2: Missing semicolon & inconsistent formatting
 const message = "Hello from BugSmith";
-console.log(message)
+console.log(message);
 
 function fetchUser() {
     // BUG 3: Returns undefined instead of object
@@ -21,10 +21,15 @@ async function loadData() {
         const res = await fetch("https://jsonplaceholder.typicode.com/posts/1")
         return res.json();
    } catch (err) {
-       console.error("Load error!", err)
+      console.error("Load error!", err);
    }
     }
 
+module.exports = {
+   addNumbers,
+   fetchUser,
+   loadData
+}
 module.exports = {
    addNumbers,
    fetchUser,
